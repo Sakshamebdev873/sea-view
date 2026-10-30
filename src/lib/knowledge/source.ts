@@ -24,12 +24,11 @@ const SnapshotSchema = z.object({
   sections: z.array(SectionSchema).min(1),
 });
 
-export type Snapshot = z.infer<typeof SnapshotSchema>;
+type Snapshot = z.infer<typeof SnapshotSchema>;
 
 export type KnowledgeSection = z.infer<typeof SectionSchema> & {
   /** Deep link to the section on the live page, used for citations. */
   url: string;
-  sourceTitle: string;
 };
 
 export const snapshot: Snapshot = SnapshotSchema.parse(raw);
@@ -37,7 +36,6 @@ export const snapshot: Snapshot = SnapshotSchema.parse(raw);
 export const sections: KnowledgeSection[] = snapshot.sections.map((s) => ({
   ...s,
   url: s.anchor ? `${snapshot.url}#${s.anchor}` : snapshot.url,
-  sourceTitle: snapshot.title,
 }));
 
 export function getSection(id: string): KnowledgeSection | undefined {

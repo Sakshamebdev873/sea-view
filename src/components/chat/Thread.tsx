@@ -15,10 +15,10 @@ import type { MessageMetadata } from "./types";
 
 /** The four questions from the brief, offered as one-tap starters. */
 const STARTERS = [
-  { label: "What is included in the package?", prompt: "What is included in the package?" },
-  { label: "Can you send me a brochure?", prompt: "Can you send me a brochure?" },
-  { label: "Can I see a video of the experience?", prompt: "Can I see a video of the experience?" },
-  { label: "Send me the brochure and a video.", prompt: "Send me the brochure and a video." },
+  "What is included in the package?",
+  "Can you send me a brochure?",
+  "Can I see a video of the experience?",
+  "Send me the brochure and a video.",
 ];
 
 export function Thread() {
@@ -50,14 +50,14 @@ function Welcome() {
         Answers come only from the Sea View Skydiving page, with a link to where each fact is.
       </p>
       <ul className="m-0 flex list-none flex-col gap-2 p-0" aria-label="Suggested questions">
-        {STARTERS.map((s) => (
-          <li key={s.prompt}>
+        {STARTERS.map((prompt) => (
+          <li key={prompt}>
             <ThreadPrimitive.Suggestion
-              prompt={s.prompt}
+              prompt={prompt}
               send
               className="flex min-h-11 w-full items-center justify-between gap-3 rounded-xl border border-forest-line px-4 py-2.5 text-left text-[14px] text-mist transition-colors hover:border-sage hover:text-foam"
             >
-              {s.label}
+              {prompt}
               <span aria-hidden="true" className="text-gold">→</span>
             </ThreadPrimitive.Suggestion>
           </li>

@@ -122,19 +122,19 @@ export type RetrievedSection = {
   matchedTerms: string[];
 };
 
-export type RetrieveOptions = {
+type RetrieveOptions = {
   /** Maximum sections to return. */
   k?: number;
   /** Earlier user turns, weighted lower, so follow-ups keep their topic. */
   context?: string;
-  /** Sections scoring below this are treated as irrelevant. */
-  minScore?: number;
 };
 
-export const CONTEXT_WEIGHT = 0.5;
+const CONTEXT_WEIGHT = 0.5;
+/** Sections scoring below this are treated as irrelevant. */
+const MIN_SCORE = 1;
 
 export function retrieve(query: string, options: RetrieveOptions = {}): RetrievedSection[] {
-  const { k = 3, context, minScore = 1 } = options;
+  const { k = 3, context } = options;
   const weights = new Map<string, number>();
   for (const t of expand(tokenize(query))) weights.set(t, 1);
   if (context) {
@@ -157,7 +157,7 @@ export function retrieve(query: string, options: RetrieveOptions = {}): Retrieve
   });
 
   return scored
-    .filter((r) => r.score >= minScore)
+    .filter((r) => r.score >= MIN_SCORE)
     .sort((a, b) => b.score - a.score || a.section.id.localeCompare(b.section.id))
     .slice(0, k);
 }

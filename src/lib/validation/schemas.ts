@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const MAX_MESSAGES = 40;
+const MAX_MESSAGES = 40;
 export const MAX_USER_TEXT = 1000;
 
 const PartSchema = z.looseObject({ type: z.string().max(64) });
@@ -42,8 +42,6 @@ export const ChatRequestSchema = z
       }
     });
   });
-
-export type ChatRequest = z.infer<typeof ChatRequestSchema>;
 
 export const TraceRequestSchema = z.object({
   question: z.string().trim().min(1, "Type a question.").max(MAX_USER_TEXT),

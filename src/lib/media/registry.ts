@@ -25,7 +25,6 @@ export type MediaItem = {
   origin: MediaOrigin;
   /** Rendered as the "Demo material" badge whenever origin is demo. */
   isDemo: boolean;
-  mimeType: "application/pdf" | "video/mp4";
   /** Human-readable size shown on the card. */
   size: string;
   /** Words a customer might use to ask for this item. */
@@ -48,7 +47,6 @@ export const MEDIA: readonly MediaItem[] = [
     posterUrl: "/media/sea-view-brochure-cover.jpg",
     origin: "demo",
     isDemo: true,
-    mimeType: "application/pdf",
     size: "2 pages",
     tags: ["brochure", "pdf", "leaflet", "flyer", "packages", "prices", "overview", "document"],
     isDefaultForType: true,
@@ -64,7 +62,6 @@ export const MEDIA: readonly MediaItem[] = [
     posterUrl: "/media/sea-view-film-poster.jpg",
     origin: "website",
     isDemo: false,
-    mimeType: "video/mp4",
     size: "12.8 MB",
     tags: ["video", "film", "jump", "freefall", "main", "experience", "watch"],
     isDefaultForType: true,
@@ -80,7 +77,6 @@ export const MEDIA: readonly MediaItem[] = [
     posterUrl: "/media/customer-clip-poster.jpg",
     origin: "website",
     isDemo: false,
-    mimeType: "video/mp4",
     size: "6.9 MB",
     tags: ["video", "clip", "customer", "real", "vertical", "deluxe", "vip", "footage"],
     isDefaultForType: false,

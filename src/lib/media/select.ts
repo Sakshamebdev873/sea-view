@@ -3,7 +3,7 @@ import { defaultMedia, getMedia, listMedia, type MediaItem, type MediaType } fro
 /** The subset of a media item the browser needs to render a card. */
 export type MediaCard = Pick<
   MediaItem,
-  "id" | "type" | "title" | "description" | "url" | "sourceUrl" | "posterUrl" | "origin" | "isDemo" | "mimeType" | "size"
+  "id" | "type" | "title" | "description" | "url" | "sourceUrl" | "posterUrl" | "origin" | "isDemo" | "size"
 >;
 
 export type ShareMediaResult =
@@ -17,9 +17,9 @@ export type ShareMediaResult =
       alternatives: MediaCard[];
     };
 
-export function toCard(item: MediaItem): MediaCard {
-  const { id, type, title, description, url, sourceUrl, posterUrl, origin, isDemo, mimeType, size } = item;
-  return { id, type, title, description, url, sourceUrl, posterUrl, origin, isDemo, mimeType, size };
+function toCard(item: MediaItem): MediaCard {
+  const { id, type, title, description, url, sourceUrl, posterUrl, origin, isDemo, size } = item;
+  return { id, type, title, description, url, sourceUrl, posterUrl, origin, isDemo, size };
 }
 
 export type ShareMediaInput = {
@@ -76,7 +76,7 @@ const MISSING_DOCS =
 /** Video subjects the website does not have. */
 const MISSING_VIDEO_SUBJECTS = /\b(drone|underwater|night|landing only|safety video|briefing video|360)\b/i;
 
-export type MediaIntent = {
+type MediaIntent = {
   pdf: boolean;
   video: boolean;
   /** Set when the customer wants something specific we do not have. */

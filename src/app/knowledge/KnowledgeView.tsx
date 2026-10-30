@@ -27,7 +27,6 @@ type KnowledgeData = {
     description: string;
     url: string;
     sourceUrl: string;
-    origin: "website" | "demo";
     isDemo: boolean;
     size: string;
     tags: string[];

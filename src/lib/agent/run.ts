@@ -29,9 +29,9 @@ import { agentTools, SHARE_MEDIA } from "./tools";
 const MAX_STEPS = 3;
 
 /** Shown to the customer when the model fails. Details stay in server logs. */
-export const MODEL_ERROR_MESSAGE =
+const MODEL_ERROR_MESSAGE =
   "Sorry, the assistant couldn't get an answer from the AI model just now. Please try again in a moment.";
-export const SIMULATED_ERROR_MESSAGE = `${MODEL_ERROR_MESSAGE} (Simulated failure for review.)`;
+const SIMULATED_ERROR_MESSAGE = `${MODEL_ERROR_MESSAGE} (Simulated failure for review.)`;
 
 export type MessageMetadata = {
   mode: AgentConfig["mode"];
@@ -43,7 +43,6 @@ type PreparedTurn = {
   config: AgentConfig;
   turns: ChatTurn[];
   query: string;
-  context?: string;
   retrieved: RetrievedSection[];
   systemPrompt: string;
 };
@@ -53,7 +52,7 @@ function prepare(messages: UIMessage[]): PreparedTurn {
   const turns = toTurns(messages);
   const { query, context } = retrievalQuery(turns);
   const retrieved = retrieve(query, { context, k: 3 });
-  return { config, turns, query, context, retrieved, systemPrompt: buildSystemPrompt(retrieved) };
+  return { config, turns, query, retrieved, systemPrompt: buildSystemPrompt(retrieved) };
 }
 
 function metadataFor(p: PreparedTurn): MessageMetadata {

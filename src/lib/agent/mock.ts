@@ -16,9 +16,9 @@ import type { ChatTurn } from "./conversation";
  * Everything it says is labelled "Mock mode" in the interface.
  */
 
-export type MockMediaCall = { input: ShareMediaInput; output: ShareMediaResult };
+type MockMediaCall = { input: ShareMediaInput; output: ShareMediaResult };
 
-export type MockReply = {
+type MockReply = {
   intent: string;
   text: string;
   media: MockMediaCall[];

@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm";
 /** Hosts the assistant may link to. Anything else renders as plain text. */
 const ALLOWED_HOSTS = new Set(["www.greedyadventures.com", "greedyadventures.com", "instagram.com"]);
 
-export function safeHref(href: string | undefined): string | null {
+function safeHref(href: string | undefined): string | null {
   if (!href) return null;
   if (href.startsWith("/") && !href.startsWith("//")) return href; // same-origin path
   try {

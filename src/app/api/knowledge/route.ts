@@ -22,8 +22,8 @@ export async function GET() {
         sections: sections.map(({ id, title, url, text }) => ({ id, title, url, text })),
       },
     ],
-    media: MEDIA.map(({ id, type, title, description, url, sourceUrl, origin, isDemo, size, tags }) => ({
-      id, type, title, description, url, sourceUrl, origin, isDemo, size, tags,
+    media: MEDIA.map(({ id, type, title, description, url, sourceUrl, isDemo, size, tags }) => ({
+      id, type, title, description, url, sourceUrl, isDemo, size, tags,
     })),
   });
 }
