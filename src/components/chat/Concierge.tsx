@@ -18,7 +18,7 @@ export function Concierge() {
       <AssistantModalPrimitive.Anchor className="fixed right-[max(16px,env(safe-area-inset-right))] bottom-[max(16px,env(safe-area-inset-bottom))] z-40 sm:right-6 sm:bottom-6">
         <AssistantModalPrimitive.Trigger
           aria-label={open ? "Close the dropzone assistant" : "Open the dropzone assistant"}
-          className="group inline-flex min-h-14 items-center gap-3 rounded-full border border-gold bg-ink py-2 pr-5 pl-2 font-sans text-[15px] font-medium text-foam shadow-[0_14px_36px_rgba(16,36,30,0.38)] transition-transform duration-300 ease-[var(--ease-editorial)] hover:-translate-y-0.5"
+          className="group inline-flex min-h-14 items-center gap-3 rounded-full border border-gold bg-ink p-2 font-sans sm:pr-5 text-[15px] font-medium text-foam shadow-[0_14px_36px_rgba(16,36,30,0.38)] transition-transform duration-300 ease-[var(--ease-editorial)] hover:-translate-y-0.5"
         >
           <span aria-hidden="true" className="relative flex size-10 items-center justify-center rounded-full bg-gold text-ink">
             <span className={`font-serif text-[21px] italic transition-all duration-300 ${open ? "scale-50 opacity-0" : ""}`}>G</span>
@@ -35,7 +35,9 @@ export function Concierge() {
               <path d="M6 9l6 6 6-6" />
             </svg>
           </span>
-          <span aria-hidden="true">{open ? "Close" : "Ask the dropzone"}</span>
+          <span aria-hidden="true" className="hidden sm:inline">
+            {open ? "Close" : "Ask the dropzone"}
+          </span>
         </AssistantModalPrimitive.Trigger>
       </AssistantModalPrimitive.Anchor>
 

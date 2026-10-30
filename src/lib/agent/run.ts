@@ -31,8 +31,7 @@ const MAX_STEPS = 3;
 /** Shown to the customer when the model fails. Details stay in server logs. */
 export const MODEL_ERROR_MESSAGE =
   "Sorry, the assistant couldn't get an answer from the AI model just now. Please try again in a moment.";
-export const SIMULATED_ERROR_MESSAGE =
-  "Simulated model failure (reviewer test). This is the message customers see when the AI model is unreachable.";
+export const SIMULATED_ERROR_MESSAGE = `${MODEL_ERROR_MESSAGE} (Simulated failure for review.)`;
 
 export type MessageMetadata = {
   mode: AgentConfig["mode"];

@@ -332,7 +332,7 @@ function TraceResult({ trace }: { trace: AgentTrace }) {
           {trace.error ? (
             <Alert>{trace.error}</Alert>
           ) : (
-            <pre className="m-0 rounded-lg bg-paper p-3 text-[14px] leading-relaxed whitespace-pre-wrap">{trace.answer || "(no text, media only)"}</pre>
+            <pre className="m-0 rounded-lg bg-paper p-3 font-sans text-[14px] leading-relaxed whitespace-pre-wrap">{trace.answer || "(no text, media only)"}</pre>
           )}
         </div>
       </div>

@@ -133,10 +133,10 @@ export function UnavailableCard({ result }: { result: Extract<ShareMediaResult, 
             <button
               key={alt.id}
               type="button"
-              onClick={() => aui.thread().append(`Send me the ${alt.title.toLowerCase()}.`)}
+              onClick={() => aui.thread().append(`Send me the ${alt.title}.`)}
               className="inline-flex min-h-11 items-center rounded-full border border-sage/50 px-4 text-[13px] text-foam hover:border-foam"
             >
-              Send the {alt.title.toLowerCase()} instead
+              Send the {alt.title} instead
             </button>
           ))}
         </div>

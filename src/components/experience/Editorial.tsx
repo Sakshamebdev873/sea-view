@@ -135,8 +135,8 @@ export function Film() {
 type Frame = { n: string; title: string; note: string; img: StaticImageData; alt: string; grow: string; tall?: boolean; position?: string };
 
 const FRAMES: Frame[] = [
-  { n: "01", title: "Check-in", note: "Sign in, bring photo ID.", img: checkIn, alt: "Guests completing check-in at the dropzone reception", grow: "flex-[3_1_520px]", tall: true, position: "object-[center_40%]" },
-  { n: "02", title: "Briefing & gear", note: "Harness fitting.", img: gear, alt: "An instructor fitting a customer's tandem harness", grow: "flex-[2_1_380px]", tall: true },
+  { n: "01", title: "Check-in", note: "Sign in, bring photo ID.", img: checkIn, alt: "Guests completing check-in at the dropzone reception", grow: "flex-[3_1_620px]", tall: true, position: "object-[center_40%]" },
+  { n: "02", title: "Briefing & gear", note: "Harness fitting.", img: gear, alt: "An instructor fitting a customer's tandem harness", grow: "flex-[2_1_480px]", tall: true },
   { n: "03", title: "The climb", note: "Up to 13,000 ft.", img: plane, alt: "The jump aircraft on the runway at the dropzone", grow: "flex-[2_1_380px]" },
   { n: "04", title: "Exit & freefall", note: "~60 seconds.", img: exit, alt: "A tandem pair just after leaving the aircraft", grow: "flex-[1.5_1_300px]" },
   { n: "05", title: "Canopy & landing", note: "5–7 minutes.", img: canopy, alt: "A tandem pair landing under a black and yellow canopy", grow: "flex-[2_1_380px]" },

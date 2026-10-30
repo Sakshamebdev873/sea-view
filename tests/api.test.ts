@@ -54,7 +54,7 @@ describe("POST /api/chat", () => {
   it("emits a readable error chunk when the model fails", async () => {
     const parts = await chunks(await chat(post({ messages: [userMessage("hi")], simulate: "model-error" })));
     const error = parts.find((p) => p.type === "error");
-    expect(error.errorText).toMatch(/Simulated model failure/);
+    expect(error.errorText).toMatch(/couldn't get an answer.*Simulated failure/);
   });
 
   it.each([
