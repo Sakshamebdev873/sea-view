@@ -1,0 +1,58 @@
+{
+  "id": "sea-view-skydiving",
+  "title": "Sea View Skydiving — Tandem Jump over Pattaya | Greedy Adventures",
+  "url": "https://www.greedyadventures.com/experiences/sea-view-skydiving",
+  "capturedAt": "2026-10-30",
+  "captureMethod": "Single HTTP GET of the public page, visible text copied verbatim into sections. No crawler.",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "anchor": "",
+      "keywords": ["overview", "about", "what", "experience", "tandem", "skydive", "pattaya", "summary"],
+      "text": "Sea View Skydiving — Tandem Jump over Pattaya. Pattaya Dropzone. Tandem skydive from 13,000 ft over the Gulf of Thailand. The same jump in every package: choose no cameras, instructor video and photos, or a personal cameraman.\nSea View Tandem Skydive - Pattaya: A tandem skydiving experience over Pattaya with ocean views. Guests receive a safety briefing, fly to jump altitude, complete the tandem jump with a certified instructor, and choose from ECO, Deluxe, or VIP package options depending on the media coverage they want.\nFrom ฿9,500 per person."
+    },
+    {
+      "id": "packages",
+      "title": "Choose your package",
+      "anchor": "options",
+      "keywords": ["package", "packages", "price", "prices", "cost", "baht", "eco", "deluxe", "vip", "included", "include", "includes", "video", "photos", "cameraman", "film", "certificate", "option", "options"],
+      "text": "Choose your package.\nECO — The jump, nothing else. ฿9,500 per person.\nIncluded: Tandem skydive experience in Pattaya, Thailand. Included: Safety briefing and tandem instructor support. Included: Aircraft ascent and ocean-view jump experience. Included: Certificate of completion.\nDELUXE — Video and photos included. ฿12,500 per person.\nIncluded: Tandem skydive experience in Pattaya, Thailand. Included: Safety briefing and tandem instructor support. Included: Aircraft ascent and ocean-view jump experience. Included: Certificate of completion.\nVIP — Personal cameraman and edited film. ฿14,000 per person.\nIncluded: Tandem skydive experience in Pattaya, Thailand. Included: Safety briefing and tandem instructor support. Included: Aircraft ascent and ocean-view jump experience. Included: Certificate of completion.\nEach package: Check availability."
+    },
+    {
+      "id": "plan",
+      "title": "The plan",
+      "anchor": "the-day",
+      "keywords": ["plan", "schedule", "day", "steps", "step", "arrive", "arrival", "check-in", "checkin", "id", "briefing", "gear", "harness", "boarding", "climb", "aircraft", "plane", "exit", "freefall", "canopy", "parachute", "landing", "long", "duration", "hours", "time", "altitude", "bring"],
+      "text": "The plan.\nStep 1 — Arrival and check-in: Sign in at the dropzone and bring your photo ID.\nStep 2 — Safety briefing and gear fitting: Meet your instructor for the safety briefing and harness fitting.\nStep 3 — Boarding and the climb: Board the aircraft and climb to jump altitude.\nStep 4 — Exit and freefall: Exit with your instructor for freefall over the Gulf of Thailand.\nStep 5 — Canopy flight and landing: Fly under the parachute with your instructor and land back at the dropzone.\nAt the dropzone: 3h. Exit altitude: 13,000 ft. 60 seconds of freefall."
+    },
+    {
+      "id": "details",
+      "title": "The details",
+      "anchor": "details",
+      "keywords": ["details", "highlights", "experience", "needed", "beginner", "first", "instructor", "uspa", "certified", "altitude", "freefall", "canopy", "minutes", "seconds", "included", "include", "aircraft", "same", "safe", "safety"],
+      "text": "The details. Everything that comes with this experience, and what to plan for yourself.\nHighlights: Exit at 13,000 ft with the Gulf of Thailand on the horizon. Around sixty seconds of freefall, then five to seven minutes under canopy along the coast. No experience needed: your USPA-certified instructor flies the jump. Same aircraft, altitude and instructors in every package.\nWhat's included: Tandem skydive experience in Pattaya, Thailand. Safety briefing and tandem instructor support. Aircraft ascent and ocean-view jump experience. Certificate of completion."
+    },
+    {
+      "id": "location",
+      "title": "Where you jump",
+      "anchor": "details",
+      "keywords": ["where", "location", "address", "located", "place", "meeting", "point", "dropzone", "rayong", "pattaya", "klaeng", "chakphong", "operator", "operated", "company", "directions", "map"],
+      "text": "Where you jump: Pattaya Sea View, Pattaya, Thailand. 95 M.4, Chakphong, Klaeng District, Rayong 21190, Thailand.\nOperated by: Dropzone Thailand."
+    },
+    {
+      "id": "faqs",
+      "title": "Good to know",
+      "anchor": "faqs",
+      "keywords": ["faq", "faqs", "question", "where", "activity", "which", "choose", "should", "recommend", "best", "bangkok", "pickup", "pick-up", "transfer", "transport", "hotel", "add-on", "addon", "extra"],
+      "text": "Good to know.\nWhere does the activity take place? The tandem skydive is listed for Pattaya, Thailand.\nWhich package should I choose? Choose ECO for the standard jump, Deluxe if you want handy cam video, and VIP if you want full media coverage.\nIs Bangkok pickup available? Yes. Bangkok pickup is available as a fixed-price add-on."
+    },
+    {
+      "id": "customer-clips",
+      "title": "A glimpse of the jump",
+      "anchor": "customer-clips",
+      "keywords": ["video", "videos", "clip", "clips", "film", "watch", "glimpse", "customers", "footage", "see"],
+      "text": "A glimpse of the jump. See it. Feel it. A few moments from our customers’ jumps in Thailand. The page also offers: Watch Main Video of the Jump."
+    }
+  ]
+}
