@@ -4,7 +4,7 @@ import { FAQS, SITE } from "./content";
 
 export function Questions() {
   return (
-    <section id="questions" aria-labelledby="faq-title" className="gutter flex scroll-mt-6 flex-wrap gap-x-18 gap-y-12 py-[clamp(96px,12vw,140px)]">
+    <section id="questions" aria-labelledby="faq-title" className="gutter flex scroll-mt-6 flex-wrap gap-x-18 gap-y-12 pt-[clamp(96px,12vw,140px)] pb-14 md:pb-[clamp(96px,12vw,140px)]">
       <div data-reveal className="flex flex-[0_1_360px] flex-col gap-[22px]">
         <p className="eyebrow m-0 text-muted">05 · Questions</p>
         <h2 id="faq-title" className="display m-0 text-[clamp(44px,4.6vw,72px)] leading-[0.95] tracking-[-0.02em]">
@@ -24,14 +24,14 @@ export function Questions() {
       </div>
       <div data-reveal className="flex-[1_1_560px] border-t border-ink">
         {FAQS.map((f, i) => (
-          <details key={f.q} open={i === 0} className="group border-b border-line py-[26px]">
+          <details key={f.q} open={i === 0} className="faq group border-b border-line py-[26px]">
             <summary className="flex cursor-pointer items-baseline justify-between gap-6 font-serif text-[clamp(24px,2.6vw,30px)] leading-tight">
               {f.q}
-              <span aria-hidden="true" className="shrink-0 font-sans text-[20px] text-muted transition-transform duration-300 group-open:rotate-45">
+              <span aria-hidden="true" className="shrink-0 font-sans text-[20px] text-muted transition-transform duration-500 ease-editorial group-open:rotate-45">
                 +
               </span>
             </summary>
-            <p className="m-0 mt-3.5 max-w-[620px] text-[16px] leading-[1.65] text-ink-soft">{f.a}</p>
+            <p className="m-0 max-w-[620px] pt-3.5 text-[16px] leading-[1.65] text-ink-soft">{f.a}</p>
           </details>
         ))}
       </div>

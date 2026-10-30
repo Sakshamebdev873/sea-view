@@ -116,6 +116,43 @@
   }
 }
 
+/*
+ * FAQ accordion: native <details>, so keyboard and screen reader behaviour
+ * stay built in. Browsers that can transition to `auto` height animate the
+ * answer open and closed; the rest simply snap open as before.
+ */
+@supports (interpolate-size: allow-keywords) {
+  .faq {
+    interpolate-size: allow-keywords;
+  }
+  .faq::details-content {
+    block-size: 0;
+    overflow: clip;
+    opacity: 0;
+    transition:
+      block-size 0.55s var(--ease-editorial),
+      opacity 0.45s var(--ease-editorial),
+      content-visibility 0.55s allow-discrete;
+  }
+  .faq[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+  .faq > p {
+    transform: translateY(-8px);
+    transition: transform 0.55s var(--ease-editorial);
+  }
+  .faq[open] > p {
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq::details-content,
+  .faq > p {
+    transition: none;
+  }
+}
+
 @keyframes cover-drift {
   from {
     transform: scale(1.08);
