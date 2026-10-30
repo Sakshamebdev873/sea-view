@@ -2,8 +2,8 @@
 
 A one-page Next.js prototype for the Greedy Adventures **Sea View Skydiving** experience: a redesigned hero and packages section, and an [assistant-ui](https://www.assistant-ui.com/) chat that answers from the page, links to its sources, remembers the conversation, and shows the brochure (PDF) or the film (video) in the chat when asked.
 
-- **Demo:** _Vercel link_
-- **Knowledge view:** `/knowledge` on the demo (also linked from the footer and the chat)
+- **Demo:** https://sea-view-tau.vercel.app/
+- **Knowledge view:** https://sea-view-tau.vercel.app/knowledge (also linked from the footer and the chat)
 - **Reference page:** https://www.greedyadventures.com/experiences/sea-view-skydiving
 
 ---
@@ -146,6 +146,7 @@ A real model failure (bad key, quota) shows the same error card; the details go 
 - One captured page. If the live page changes, the snapshot must be re-captured by hand.
 - Keyword retrieval (BM25 + small synonym list) can miss paraphrases that share no words with the page. Fine for one page; a larger site would need embeddings.
 - No rate limiting or abuse protection on `/api/chat` (prototype). On a public deployment I would add per-IP limits.
+- The demo uses Gemini's free tier. Many messages in quick succession can hit its rate limit; the chat then shows the error card with **Try again** instead of failing silently.
 - The conversation lives in the browser tab only; refreshing clears it (by design: no database).
 - Mock mode understands a fixed set of intents; it is for demonstrating the flow, not for open conversation.
 - "Check availability" links out to the real page. There are no bookings, payments or logins (out of scope).
